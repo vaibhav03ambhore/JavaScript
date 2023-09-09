@@ -1,0 +1,29 @@
+<!-- we are gonna use objects to add score feature in our rock-paper-scissors game -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects-rock-paper-scissor-game</title>
+</head>
+<body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+    playGame('rock');
+    ">Rock</button>
+    <button onclick="
+    playGame('paper');
+    ">Paper</button>
+    <button onclick="
+    playGame('scissors');
+    ">Scissors</button>
+    <button onclick="
+    score.wins=0;
+    score.losses=0;
+    score.ties=0;
+
+    localStorage.removeItem('score');
+    ">Reset Score</button>
+</body>
+<script src="updated-R-P-S.js"></script>
+</html>

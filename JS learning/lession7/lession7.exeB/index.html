@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function-ExerciseB</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function convertToFahrenheit(celsius){
+        const fahrenheit = celsius * 1.8 + 32;
+        return fahrenheit ;
+   }
+
+   console.log(convertToFahrenheit(25));
+
+
+   function convertToCelsius(fahrenheit){
+    const celsius=(fahrenheit-32)/1.8;
+    return celsius;
+   }
+   console.log(convertToCelsius(86));
+
+
+   function convertTemperature(degrees,unit){
+    if(unit=='C'){
+        return `${convertToFahrenheit(degrees)}F`;
+    }
+    else if(unit=='F'){
+        return `${convertToCelsius(degrees)}C`;
+    }
+    else if(!unit && !degrees){
+        return 'provide unit and degrees';
+    }
+    else if(!unit){
+        return 'provide unit';
+    }
+    else if(!degrees){
+        return 'provide degrees';
+    }
+    else{
+        return 'provide correct unit';
+    }
+  
+   }
+
+   console.log(convertTemperature(25,'C'));
+   console.log(convertTemperature(86,'F'));
+   console.log(convertTemperature());
+
+</script>
+</html>exeexe

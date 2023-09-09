@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-project</title>
+</head>
+<body>
+    
+    <p>Twitter follow button</p>
+    <button class="follow-button" onclick="
+       follow();
+    ">
+     Follow
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Cost greater than 40 => Free shiping </p>
+    <p>Cost less than 40 => +10 shipping charge</p>
+    <input class="js-cost-input"  placeholder="Cost of order" type="number" 
+        onkeydown="
+           // console.log(event);//display object ( key and keycode set )
+         handleKeyDown(event);  
+    ">
+    <button onclick="
+        calculateTotal();
+    ">Calculate</button>
+    <p class="js-total-cost"></p>
+
+
+    <script src="dom-project.js">
+       
+    </script>
+</body>
+</html>

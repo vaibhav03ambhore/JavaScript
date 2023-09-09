@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function-Exercise</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function greet(){
+        console.log('Hello!!');
+    }
+    greet();
+    greet();
+    function greet2(name){
+        console.log(`Hello ${name}`);
+    }
+    greet2('Vaibhav');
+    greet2('Pratik');
+
+    greet2();//print 'hello undefined'
+    function greet3(name){
+        console.log(`Hello ${name}`);
+        if(!name) console.log('Hi there!');
+    }
+    greet3();
+
+    function greet4(name='Hi buddy!'){
+        console.log(`Hello ${name}`);
+    }
+    greet4('VAIBHAV');//print 'Hello VAIBHAV' it will consider Hi buddy only if there is no argument in function call
+    greet4();//print 'Hello Hi buddy!'
+    
+</script>
+</html>
