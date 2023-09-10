@@ -12,7 +12,11 @@ function calculateTotal(){
     const inputElement=document.querySelector('.js-cost-input');
     let cost= Number(inputElement.value);
     if(cost<40&& cost>0){
-        cost+=10;
+        //solved exercise 9a.
+        cost*=100;
+        cost+=1000;
+
+        cost/=100;
     }
     document.querySelector('.js-total-cost')
         .innerHTML=`Total cost: $${cost}`;

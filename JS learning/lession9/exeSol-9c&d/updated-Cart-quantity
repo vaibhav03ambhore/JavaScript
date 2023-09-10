@@ -1,0 +1,70 @@
+<!-- solution of 9c -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart-Quantity</title>
+</head>
+<body>
+    <p>welcome to the cart!!</p>
+    <button onclick="showCart();">Show cart</button>
+    <button onclick="
+        updateCartQuantity(1);
+    ">Add to cart</button>
+
+    <button onclick=" 
+        updateCartQuantity(2);
+    ">+2</button>
+
+    <button onclick=" 
+        updateCartQuantity(3);
+    ">+3</button>
+
+    <button onclick="
+    cartQuantity=0;
+    showCart();
+    console.log(`cartQuantity: ${cartQuantity} `)
+    ">Reset cart</button>
+    
+    <button onclick=" 
+     updateCartQuantity(-1);
+    ">Remove from cart</button>
+
+    <p class="js-quantity-display"></p>
+   
+</body>
+<script>
+    let cartQuantity=0;
+    const quantityDisplay=document.querySelector('.js-quantity-display');
+
+    function updateCartQuantity(value){
+        
+        if((cartQuantity>=10 && value>0 )|| cartQuantity+value>=10){
+            // console.log(`Cart is full`);
+            cartQuantity=10;
+        
+            showCart();
+        }
+        else if((cartQuantity==0 && value<0)|| cartQuantity+value<=0){
+            // console.log(`cart is empty!!`);
+            cartQuantity=0;
+            showCart();
+        }
+        else{
+            cartQuantity+=value;
+            // console.log(`cartQuantity: ${cartQuantity} `);
+            showCart();
+        }
+
+        
+    }
+
+    function showCart(){
+     if(cartQuantity<=0)   quantityDisplay.textContent=`Cart Quantity: ${cartQuantity} (cart is empty) `;
+     else if(cartQuantity>=10) quantityDisplay.textContent=`Cart Quantity: ${cartQuantity} (cart is full)`;
+     else quantityDisplay.textContent=`cartQuantity: ${cartQuantity} `;
+    
+    }
+</script>
+</html>
