@@ -11,16 +11,32 @@ function calculateTotal(){
 
     const inputElement=document.querySelector('.js-cost-input');
     let cost= Number(inputElement.value);
-    if(cost<40&& cost>0){
+
+    const invalidCost=document.querySelector('.js-invalid-cost');
+        
+    if(cost<=0){
+
+        invalidCost.innerHTML='Please enter a valid number';
+        invalidCost.classList.add('cost-error');
+        document.querySelector('.js-total-cost')
+        .innerHTML=``;
+        return;
+    }
+    else if(cost<40&& cost>0){
         //solved exercise 9a.
         cost*=100;
         cost+=1000;
 
         cost/=100;
+
     }
+    
+    invalidCost.innerHTML='';
+    invalidCost.classList.remove('cost-error');
     
     document.querySelector('.js-total-cost')
         .innerHTML=`Total cost: $${cost}`;
+
 }
 
 function follow(){

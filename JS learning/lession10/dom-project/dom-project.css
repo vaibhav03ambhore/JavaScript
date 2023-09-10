@@ -40,3 +40,7 @@ body{
     color: black;
     border: 2px solid green;
 }
+
+.cost-error{
+    color: red;
+}
