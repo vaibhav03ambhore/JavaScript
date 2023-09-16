@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calci.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        
+        <p class="js-displey display"></p>
+        <p>
+            <button class=" gray-btn" onclick="
+                calculation+='1';
+                console.log(calculation)
+                displayCalculation();
+                "
+            >1</button>
+            <button class="gray-btn" onclick="
+                calculation+='2';
+                console.log(calculation)
+                displayCalculation();
+            ">2</button>
+            <button class="gray-btn" onclick="
+                calculation+='3';
+                console.log(calculation)
+                displayCalculation();
+            ">3</button>
+            <button class="gray-btn orange-btn" onclick="calculation+=' + ';
+                console.log(calculation)
+                displayCalculation();
+            ">+</button>
+        </p>
+        <p>
+            <button class="gray-btn" onclick="
+            calculation+='4';
+            console.log(calculation)
+            displayCalculation();
+            ">4</button>
+            <button class="gray-btn" onclick="
+            calculation+='5';
+            console.log(calculation)
+            displayCalculation();
+            ">5</button>
+            <button class="gray-btn" onclick=
+            "calculation+='6';
+            console.log(calculation)
+            displayCalculation();
+            ">6</button>
+            <button class="gray-btn orange-btn" onclick="
+            calculation+=' - ';
+            console.log(calculation)
+            displayCalculation();
+            ">-</button>
+        </p>
+        <p>
+            <button class="gray-btn" onclick="
+            updateCalci('7');
+            ">7</button>
+            <button class="gray-btn" onclick="
+            updateCalci('8');
+            ">8</button>
+            <button class="gray-btn" onclick="
+                updateCalci('9');
+            ">9</button>
+            <button class="gray-btn orange-btn" onclick="
+                updateCalci(' * ');
+            ">*</button>
+        </p>
+        <p>
+            <button class="gray-btn" onclick="
+                updateCalci('0');
+            ">0</button>
+            <button class="gray-btn" onclick="
+                updataCalci('.');
+            ">.</button>
+            <button class="e-btn gray-btn" onclick="
+                calculation=eval(calculation);
+                localStorage.setItem('calculation',(calculation));
+                console.log(calculation);
+                displayCalculation();
+            ">=</button>
+            <button class="gray-btn orange-btn" onclick="
+            updateCalci('/');
+            ">/</button>
+        </p>
+        <p>
+            <button class="clear-btn" onclick="
+                localStorage.removeItem('calculation');
+                calculation='';
+                console.log('cleared!!');
+                displayCalculation();
+            ">clear</button>
+        </p>
+    </div>
+    <script src="calci.js"> </script>
+        
+</body>
+
+</html>
